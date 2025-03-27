@@ -3,9 +3,9 @@ name = "cr-prep"
 version = "0.1.0"
 edition = "2021"
 description = "A CLI tool for collecting code files for code review"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["kyuki3rain<kyuki3rain@gmail.com>"]
 license = "MIT"
-repository = "https://github.com/yourusername/cr-prep"
+repository = "https://github.com/kyuki3rain/cr-prep"
 keywords = ["cli", "code-review", "development-tools"]
 categories = ["command-line-utilities", "development-tools"]
 
