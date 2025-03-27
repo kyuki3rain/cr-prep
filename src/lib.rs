@@ -67,7 +67,7 @@ mod tests {
         file.write_all(test_content.as_bytes())?;
 
         let result = process_file(&file_path, &base_path)?;
-        let expected = format!("// test.rs\n{}\n", test_content);
+        let expected = format!("## test.rs\n```\n{}\n```\n", test_content);
 
         assert_eq!(result, expected);
         Ok(())
