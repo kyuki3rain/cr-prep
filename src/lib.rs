@@ -24,7 +24,7 @@ pub fn process_file(file_path: &PathBuf, base_path: &PathBuf) -> Result<String> 
         .with_context(|| format!("Failed to get relative path for: {}", file_path.display()))?;
     
     Ok(format!(
-        "// {}\n{}\n",
+        "## {}\n```\n{}\n```\n",
         relative_path.display(),
         content
     ))
