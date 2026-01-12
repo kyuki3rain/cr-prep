@@ -1,6 +1,10 @@
 # cr-prep
 
-A CLI tool for collecting code files for code review. This tool recursively searches through a specified directory and outputs the content of code files (`.rs`, `.ts`, `.js`, `.py`, `.go`) in a format suitable for code review.
+[![Crates.io](https://img.shields.io/crates/v/cr-prep.svg)](https://crates.io/crates/cr-prep)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://github.com/kyuki3rain/cr-prep/workflows/CI/badge.svg)](https://github.com/kyuki3rain/cr-prep/actions)
+
+A CLI tool for collecting code files for code review. This tool recursively searches through a specified directory and outputs the content of code files in a Markdown format suitable for code review with LLMs.
 
 ## Installation
 
@@ -13,7 +17,7 @@ cargo install cr-prep
 Or build from source:
 
 ```bash
-git clone https://github.com/yourusername/cr-prep
+git clone https://github.com/kyuki3rain/cr-prep
 cd cr-prep
 cargo build --release
 ```
@@ -27,7 +31,7 @@ Basic usage:
 cr-prep --path /path/to/your/project
 
 # Output to a file
-cr-prep --path /path/to/your/project --output review.txt
+cr-prep --path /path/to/your/project --output review.md
 ```
 
 ### Options
@@ -37,16 +41,22 @@ cr-prep --path /path/to/your/project --output review.txt
 
 ### Example Output
 
+The output is in Markdown format with each file wrapped in a code block:
+
 ```
-// src/main.rs
+## src/main.rs
+\`\`\`
 fn main() {
     println!("Hello, world!");
 }
+\`\`\`
 
-// src/lib.rs
+## src/lib.rs
+\`\`\`
 pub fn add(a: i32, b: i32) -> i32 {
     a + b
 }
+\`\`\`
 ```
 
 ## Supported File Types
@@ -66,3 +76,7 @@ pub fn add(a: i32, b: i32) -> i32 {
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
