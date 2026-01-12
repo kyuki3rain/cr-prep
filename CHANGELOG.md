@@ -7,12 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.1] - 2025-01-12
 
+### Added
+
+- **Syntax highlighting**: Code blocks now include language identifiers (e.g., `rust`, `typescript`)
+- **50+ file types**: Extended support for many programming languages including Java, C/C++, Ruby, PHP, Swift, Kotlin, Scala, Haskell, and more
+- **.gitignore support**: Automatically respects `.gitignore`, global gitignore, and `.git/info/exclude` patterns
+- GitHub Actions workflow for automated releases
+
 ### Changed
 
-- Improved README with badges and better documentation
+- Improved README with badges, feature list, and comprehensive file type documentation
 - Updated LICENSE author name
-- Added CHANGELOG
-- Added GitHub Actions workflow for automated releases
+- Replaced `walkdir` with `ignore` crate for gitignore support
+- Function signatures now use `&Path` instead of `&PathBuf` (more idiomatic)
 
 ## [0.2.0] - 2025-01-12
 
